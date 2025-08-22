@@ -2,143 +2,394 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M Ishar Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Boxicons -->
-  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-  <style>
-    /* Blob Animation */
-    @keyframes blob {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(30px, -50px) scale(1.1); }
-      66% { transform: translate(-20px, 20px) scale(0.9); }
-    }
-    .animate-blob {
-      animation: blob 8s infinite;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Ishar Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Boxicons -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Blob Animation */
+        @keyframes blob {
 
-    /* Fade In Up Animation */
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fadeInUp {
-      animation: fadeInUp 1s ease forwards;
-    }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-400 { animation-delay: 0.4s; }
-  </style>
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 8s infinite;
+        }
+
+        /* Fade In Up Animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+    </style>
 </head>
 
 <body class="bg-white font-sans font-light text-gray-700">
 
-<!-- ===== NAVBAR ===== -->
-<header class="fixed w-full bg-white shadow mb-20 z-50">
-  <nav class="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
-    <!-- Logo -->
-    <a href="#" class="flex items-center text-blue-600 text-3xl gap-2">
-      <i class='bx bxs-rocket'></i> <span>IsharWeb</span>
-    </a>
+    <!-- ===== NAVBAR ===== -->
+    <header class="fixed w-full bg-white shadow mb-20 z-50">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
+            <!-- Logo -->
+            <a href="#" class="flex items-center text-blue-600 text-3xl gap-2">
+                <i class='bx bxs-rocket'></i> <span>IsharWeb</span>
+            </a>
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex gap-8 items-center">
-      <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
-        <i class='bx bx-home text-xl'></i>
-        <a href="#home">Home</a>
-      </li>
-      <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
-        <i class='bx bx-user text-xl'></i>
-        <a href="#about">About</a>
-      </li>
-      <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
-        <i class='bx bx-code-alt text-xl'></i>
-        <a href="#skills">Skills</a>
-      </li>
-      <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
-        <i class='bx bx-briefcase text-xl'></i>
-        <a href="#work">Work</a>
-      </li>
-      <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
-        <i class='bx bx-envelope text-xl'></i>
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-8 items-center">
+                <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
+                    <i class='bx bx-home text-xl'></i>
+                    <a href="#home">Home</a>
+                </li>
+                <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
+                    <i class='bx bx-user text-xl'></i>
+                    <a href="#about">About</a>
+                </li>
+                <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
+                    <i class='bx bx-code-alt text-xl'></i>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
+                    <i class='bx bx-briefcase text-xl'></i>
+                    <a href="#work">Work</a>
+                </li>
+                <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
+                    <i class='bx bx-envelope text-xl'></i>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
 
-    <!-- Mobile Menu Button -->
-    <div id="nav-toggle" class="md:hidden cursor-pointer text-3xl">
-      <i class='bx bx-menu'></i>
-    </div>
-  </nav>
-</header>
+            <!-- Mobile Menu Button -->
+            <div id="nav-toggle" class="md:hidden cursor-pointer text-3xl">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
 
-<!-- ===== Hero ===== -->
-<section id="home" class="relative px-8 overflow-hidden flex items-center justify-center min-h-screen">
-  <div class="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl space-y-16 lg:space-y-10 lg:space-x-16">
-    <!-- Text Content -->
-    <div class="flex flex-col text-center lg:text-left lg:max-w-lg space-y-12">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl leading-tight">
-        Hi, I'm <span class="text-blue-600">M Ishar</span>
-      </h1>
-      <p class="text-lg sm:text-xl leading-relaxed">
-        I build clean, responsive, and modern websites & web applications.
-      </p>
-      <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-center lg:justify-start">
-        <a href="#contact" 
-           class="flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 px-6 py-3 rounded-lg">
-          <i class='bx bx-briefcase text-xl'></i> Hire Me
-        </a>
-        <a href="assets/files/M_Ishar_CV.pdf" download
-           class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300 px-6 py-3 border rounded-lg">
-          <i class='bx bx-download text-xl'></i> Download CV
-        </a>
+    <!-- ===== Hero ===== -->
+    <section id="home" class="relative px-8 overflow-hidden flex items-center justify-center min-h-screen">
+        <div
+            class="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl space-y-16 lg:space-y-10 lg:space-x-16">
+            <!-- Text Content -->
+            <div class="flex flex-col text-center lg:text-left lg:max-w-lg space-y-12">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl leading-tight">
+                    Hi, I'm <span class="text-blue-600">M Ishar</span>
+                </h1>
+                <p class="text-lg sm:text-xl leading-relaxed">
+                    I build clean, responsive, and modern websites & web applications.
+                </p>
+                <div
+                    class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-center lg:justify-start">
+                    <a href="#contact"
+                        class="flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 px-6 py-3 rounded-lg">
+                        <i class='bx bx-briefcase text-xl'></i> Hire Me
+                    </a>
+                    <a href="assets/files/M_Ishar_CV.pdf" download
+                        class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300 px-6 py-3 border rounded-lg">
+                        <i class='bx bx-download text-xl'></i> Download CV
+                    </a>
+                </div>
+            </div>
+            <!-- Image Content -->
+            <div class="flex justify-center p-6">
+                <img src="https://avatars.githubusercontent.com/u/171306025?v=4" alt="Web Development Illustration"
+                    class="w-full max-w-md h-auto object-cover rounded-lg border">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section id="about" class="relative py-20">
+        <div
+            class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-0 space-y-12 lg:space-y-0 lg:space-x-12">
+            <!-- Image -->
+            <div class="flex justify-center lg:w-1/2">
+                <img src="https://avatars.githubusercontent.com/u/171306025?v=4" alt="About M Ishar"
+                    class="w-full max-w-sm h-auto object-cover rounded-lg border">
+            </div>
+            <!-- Text -->
+            <div class="flex flex-col lg:w-1/2 text-center lg:text-left space-y-6">
+                <h2 class="text-3xl sm:text-4xl">
+                    About <span class="text-blue-600">Me</span>
+                </h2>
+                <p class="text-lg leading-relaxed">
+                    I'm a passionate web developer who creates clean, responsive, and user-friendly websites using HTML,
+                    CSS, JavaScript, React, and Tailwind CSS.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    With experience in front-end frameworks and modern design tools, I build projects that are not only
+                    functional but also visually appealing.
+                </p>
+                <!-- Buttons -->
+                <div
+                    class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-center lg:justify-start">
+                    <a href="#contact"
+                        class="flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 px-6 py-3 rounded-lg">
+                        <i class='bx bx-briefcase text-xl'></i> Hire Me
+                    </a>
+                    <a href="assets/files/M_Ishar_CV.pdf" download
+                        class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300 px-6 py-3 border rounded-lg">
+                        <i class='bx bx-download text-xl'></i> Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Skills Section ===== -->
+
+    <section id="skills" class="bg-white py-20">
+        <div class="container px-6 mx-auto">
+            <!-- Skills Heading -->
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center">
+                My <span class="text-blue-600">Skills</span>
+            </h2>
+            <p class="text-lg leading-relaxed mb-16 text-center max-w-2xl mx-auto">
+                I work with modern web technologies to build fast, responsive, and scalable applications.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- HTML -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-html5 text-6xl text-orange-600'></i>
+                    <h3 class="mt-4 text-lg font-semibold">HTML5</h3>
+                </div>
+
+                <!-- CSS -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-css3 text-6xl text-blue-600'></i>
+                    <h3 class="mt-4 text-lg font-semibold">CSS3</h3>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-javascript text-6xl text-yellow-500'></i>
+                    <h3 class="mt-4 text-lg font-semibold">JavaScript</h3>
+                </div>
+
+                <!-- Python -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-python text-6xl text-blue-500'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Python</h3>
+                </div>
+
+                <!-- React -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-react text-6xl text-blue-500'></i>
+                    <h3 class="mt-4 text-lg font-semibold">React.js</h3>
+                </div>
+
+                <!-- Next.js -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-nodejs text-6xl text-gray-800'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Next.js</h3>
+                </div>
+
+                <!-- Node.js -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-nodejs text-6xl text-green-600'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Node.js</h3>
+                </div>
+
+                <!-- Express.js -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bx-server text-6xl text-gray-700'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Express.js</h3>
+                </div>
+
+                <!-- Redux Toolkit -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxs-data text-6xl text-purple-600'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Redux Toolkit</h3>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-typescript text-6xl text-blue-700'></i>
+                    <h3 class="mt-4 text-lg font-semibold">TypeScript</h3>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-tailwind-css text-6xl text-teal-500'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Tailwind CSS</h3>
+                </div>
+
+                <!-- Sass -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-sass text-6xl text-pink-500'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Sass</h3>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-bootstrap text-6xl text-purple-700'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Bootstrap</h3>
+                </div>
+
+                <!-- Git -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-git text-6xl text-orange-500'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Git</h3>
+                </div>
+
+                <!-- GitHub -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-github text-6xl text-black'></i>
+                    <h3 class="mt-4 text-lg font-semibold">GitHub</h3>
+                </div>
+
+                <!-- WordPress -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-wordpress text-6xl text-blue-800'></i>
+                    <h3 class="mt-4 text-lg font-semibold">WordPress</h3>
+                </div>
+
+                <!-- Shopify -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bxl-shopify text-6xl text-green-700'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Shopify</h3>
+                </div>
+
+                <!-- Other Tools -->
+                <div class="flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-lg transition">
+                    <i class='bx bx-code-alt text-6xl text-gray-800'></i>
+                    <h3 class="mt-4 text-lg font-semibold">Other Tools</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- ===== Work Section ===== -->
+    <section id="works" class="bg-gray-50 py-20">
+  <div class="container mx-auto px-6">
+    <!-- Heading -->
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6">
+      My <span class="text-blue-600">Projects</span>
+    </h2>
+    <p class="text-lg text-center text-gray-600 max-w-2xl mx-auto mb-16">
+      A few of my GitHub repositories showcasing my work.
+    </p>
+
+    <!-- Project Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <!-- C++ Project -->
+      <div class="group bg-white rounded-xl shadow hover:shadow-xl transition relative overflow-hidden">
+        <div class="p-8 text-center">
+          <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">C++ Projects</h3>
+        </div>
+        <div class="absolute inset-0 bg-white bg-opacity-95 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center p-6">
+          <i class='bx bxl-c-plus-plus text-4xl text-blue-600 mb-3'></i>
+          <a href="https://github.com/IsharWeb/Cpp" target="_blank" class="text-blue-600 font-medium hover:underline mb-2 flex items-center">
+            View Repo <i class='bx bx-link-external ml-1'></i>
+          </a>
+        </div>
       </div>
-    </div>
-    <!-- Image Content -->
-    <div class="flex justify-center p-6">
-      <img src="https://avatars.githubusercontent.com/u/171306025?v=4" 
-           alt="Web Development Illustration" 
-           class="w-full max-w-md h-auto object-cover rounded-lg border">
+
+      <!-- Python Project -->
+      <div class="group bg-white rounded-xl shadow hover:shadow-xl transition relative overflow-hidden">
+        <div class="p-8 text-center">
+          <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Python Projects</h3>
+        </div>
+        <div class="absolute inset-0 bg-white bg-opacity-95 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center p-6">
+          <i class='bx bxl-python text-4xl text-yellow-500 mb-3'></i>
+          <a href="https://github.com/IsharWeb/Python" target="_blank" class="text-blue-600 font-medium hover:underline mb-2 flex items-center">
+            View Repo <i class='bx bx-link-external ml-1'></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- JavaScript Project -->
+      <div class="group bg-white rounded-xl shadow hover:shadow-xl transition relative overflow-hidden">
+        <div class="p-8 text-center">
+          <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">JavaScript Projects</h3>
+        </div>
+        <div class="absolute inset-0 bg-white bg-opacity-95 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center p-6">
+          <i class='bx bxl-javascript text-4xl text-yellow-400 mb-3'></i>
+          <a href="https://github.com/IsharWeb/JavaScript" target="_blank" class="text-blue-600 font-medium hover:underline mb-2 flex items-center">
+            View Repo <i class='bx bx-link-external ml-1'></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- React Projects -->
+      <div class="group bg-white rounded-xl shadow hover:shadow-xl transition relative overflow-hidden">
+        <div class="p-8 text-center">
+          <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">React Projects</h3>
+        </div>
+        <div class="absolute inset-0 bg-white bg-opacity-95 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center p-6">
+          <i class='bx bxl-react text-4xl text-blue-400 mb-3'></i>
+          <a href="https://github.com/IsharWeb/React_All_Project" target="_blank" class="text-blue-600 font-medium hover:underline mb-2 flex items-center">
+            View Repo <i class='bx bx-link-external ml-1'></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Vite Project -->
+      <div class="group bg-white rounded-xl shadow hover:shadow-xl transition relative overflow-hidden">
+        <div class="p-8 text-center">
+          <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Vite Project</h3>
+        </div>
+        <div class="absolute inset-0 bg-white bg-opacity-95 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center p-6">
+          <i class='bx bxl-vuejs text-4xl text-green-500 mb-3'></i>
+          <a href="https://github.com/IsharWeb/vite-react" target="_blank" class="text-blue-600 font-medium hover:underline mb-2 flex items-center">
+            View Repo <i class='bx bx-link-external ml-1'></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tourly Blog -->
+      <div class="group bg-white rounded-xl shadow hover:shadow-xl transition relative overflow-hidden">
+        <div class="p-8 text-center">
+          <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Tourly Blog</h3>
+        </div>
+        <div class="absolute inset-0 bg-white bg-opacity-95 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center p-6">
+          <i class='bx bx-world text-4xl text-purple-500 mb-3'></i>
+          <a href="https://github.com/IsharWeb/Tourly" target="_blank" class="text-blue-600 font-medium hover:underline mb-2 flex items-center">
+            View Repo <i class='bx bx-link-external ml-1'></i>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== About Section ===== -->
-<section id="about" class="relative py-20">
-  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-0 space-y-12 lg:space-y-0 lg:space-x-12">
-    <!-- Image -->
-    <div class="flex justify-center lg:w-1/2">
-      <img src="https://avatars.githubusercontent.com/u/171306025?v=4" 
-           alt="About M Ishar"
-           class="w-full max-w-sm h-auto object-cover rounded-lg border">
-    </div>
-    <!-- Text -->
-    <div class="flex flex-col lg:w-1/2 text-center lg:text-left space-y-6">
-      <h2 class="text-3xl sm:text-4xl">
-        About <span class="text-blue-600">Me</span>
-      </h2>
-      <p class="text-lg leading-relaxed">
-        I'm a passionate web developer who creates clean, responsive, and user-friendly websites using HTML, CSS, JavaScript, React, and Tailwind CSS.
-      </p>
-      <p class="text-lg leading-relaxed">
-        With experience in front-end frameworks and modern design tools, I build projects that are not only functional but also visually appealing.
-      </p>
-      <!-- Buttons -->
-      <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-center lg:justify-start">
-        <a href="#contact" 
-           class="flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 px-6 py-3 rounded-lg">
-          <i class='bx bx-briefcase text-xl'></i> Hire Me
-        </a>
-        <a href="assets/files/M_Ishar_CV.pdf" download
-           class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300 px-6 py-3 border rounded-lg">
-          <i class='bx bx-download text-xl'></i> Download CV
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
