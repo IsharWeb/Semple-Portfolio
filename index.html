@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M Ishar Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Boxicons -->
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    /* Blob Animation */
+    @keyframes blob {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+    }
+    .animate-blob {
+      animation: blob 8s infinite;
+    }
+
+    /* Fade In Up Animation */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease forwards;
+    }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-400 { animation-delay: 0.4s; }
+  </style>
+</head>
+
+<body class="bg-white font-sans font-light text-gray-700">
+
+<!-- ===== NAVBAR ===== -->
+<header class="fixed w-full bg-white shadow mb-20 z-50">
+  <nav class="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
+    <!-- Logo -->
+    <a href="#" class="flex items-center text-blue-600 text-3xl gap-2">
+      <i class='bx bxs-rocket'></i> <span>IsharWeb</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-8 items-center">
+      <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
+        <i class='bx bx-home text-xl'></i>
+        <a href="#home">Home</a>
+      </li>
+      <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
+        <i class='bx bx-user text-xl'></i>
+        <a href="#about">About</a>
+      </li>
+      <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
+        <i class='bx bx-code-alt text-xl'></i>
+        <a href="#skills">Skills</a>
+      </li>
+      <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
+        <i class='bx bx-briefcase text-xl'></i>
+        <a href="#work">Work</a>
+      </li>
+      <li class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300">
+        <i class='bx bx-envelope text-xl'></i>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <div id="nav-toggle" class="md:hidden cursor-pointer text-3xl">
+      <i class='bx bx-menu'></i>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== Hero ===== -->
+<section id="home" class="relative px-8 overflow-hidden flex items-center justify-center min-h-screen">
+  <div class="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl space-y-16 lg:space-y-10 lg:space-x-16">
+    <!-- Text Content -->
+    <div class="flex flex-col text-center lg:text-left lg:max-w-lg space-y-12">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl leading-tight">
+        Hi, I'm <span class="text-blue-600">M Ishar</span>
+      </h1>
+      <p class="text-lg sm:text-xl leading-relaxed">
+        I build clean, responsive, and modern websites & web applications.
+      </p>
+      <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-center lg:justify-start">
+        <a href="#contact" 
+           class="flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 px-6 py-3 rounded-lg">
+          <i class='bx bx-briefcase text-xl'></i> Hire Me
+        </a>
+        <a href="assets/files/M_Ishar_CV.pdf" download
+           class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300 px-6 py-3 border rounded-lg">
+          <i class='bx bx-download text-xl'></i> Download CV
+        </a>
+      </div>
+    </div>
+    <!-- Image Content -->
+    <div class="flex justify-center p-6">
+      <img src="https://avatars.githubusercontent.com/u/171306025?v=4" 
+           alt="Web Development Illustration" 
+           class="w-full max-w-md h-auto object-cover rounded-lg border">
+    </div>
+  </div>
+</section>
+
+<!-- ===== About Section ===== -->
+<section id="about" class="relative py-20">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-0 space-y-12 lg:space-y-0 lg:space-x-12">
+    <!-- Image -->
+    <div class="flex justify-center lg:w-1/2">
+      <img src="https://avatars.githubusercontent.com/u/171306025?v=4" 
+           alt="About M Ishar"
+           class="w-full max-w-sm h-auto object-cover rounded-lg border">
+    </div>
+    <!-- Text -->
+    <div class="flex flex-col lg:w-1/2 text-center lg:text-left space-y-6">
+      <h2 class="text-3xl sm:text-4xl">
+        About <span class="text-blue-600">Me</span>
+      </h2>
+      <p class="text-lg leading-relaxed">
+        I'm a passionate web developer who creates clean, responsive, and user-friendly websites using HTML, CSS, JavaScript, React, and Tailwind CSS.
+      </p>
+      <p class="text-lg leading-relaxed">
+        With experience in front-end frameworks and modern design tools, I build projects that are not only functional but also visually appealing.
+      </p>
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-center lg:justify-start">
+        <a href="#contact" 
+           class="flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 px-6 py-3 rounded-lg">
+          <i class='bx bx-briefcase text-xl'></i> Hire Me
+        </a>
+        <a href="assets/files/M_Ishar_CV.pdf" download
+           class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300 px-6 py-3 border rounded-lg">
+          <i class='bx bx-download text-xl'></i> Download CV
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
