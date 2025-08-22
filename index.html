@@ -131,42 +131,53 @@
     </section>
 
     <!-- ===== About Section ===== -->
-    <section id="about" class="relative py-20">
+    <!-- ===== About Section (Reworked) ===== -->
+    <section id="about" class="relative bg-gray-50 py-28">
         <div
-            class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-0 space-y-12 lg:space-y-0 lg:space-x-12">
+            class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12 space-y-16 lg:space-y-0 lg:space-x-16">
+
             <!-- Image -->
             <div class="flex justify-center lg:w-1/2">
                 <img src="https://avatars.githubusercontent.com/u/171306025?v=4" alt="About M Ishar"
-                    class="w-full max-w-sm h-auto object-cover rounded-lg border">
+                    class="w-full max-w-md h-auto object-cover rounded-2xl shadow-lg border">
             </div>
+
             <!-- Text -->
-            <div class="flex flex-col lg:w-1/2 text-center lg:text-left space-y-6">
-                <h2 class="text-3xl sm:text-4xl">
-                    About <span class="text-blue-600">Me</span>
-                </h2>
-                <p class="text-lg leading-relaxed">
-                    I'm a passionate web developer who creates clean, responsive, and user-friendly websites using HTML,
-                    CSS, JavaScript, React, and Tailwind CSS.
+            <div class="flex flex-col lg:w-1/2 text-center lg:text-left space-y-8">
+                <!-- Heading -->
+                <div>
+                    <h2 class="text-4xl sm:text-5xl font-semibold mb-4">
+                        About <span class="text-blue-600">Me</span>
+                    </h2>
+                    <div class="w-24 h-1 bg-blue-600 mx-auto lg:mx-0 rounded-full"></div>
+                </div>
+
+                <!-- Paragraphs -->
+                <p class="text-lg leading-relaxed text-gray-700">
+                    I'm a passionate web developer who creates clean, responsive, and user-friendly websites using
+                    <strong>HTML, CSS, JavaScript, React, and Tailwind CSS</strong>.
                 </p>
-                <p class="text-lg leading-relaxed">
-                    With experience in front-end frameworks and modern design tools, I build projects that are not only
-                    functional but also visually appealing.
+                <p class="text-lg leading-relaxed text-gray-700">
+                    With experience in front-end frameworks, backend basics, and modern design tools,
+                    I build projects that are <strong>functional, visually appealing, and performance-focused</strong>.
                 </p>
-                <!-- Buttons -->
+
+                <!-- Buttons (different style from Hero) -->
                 <div
                     class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-center lg:justify-start">
                     <a href="#contact"
-                        class="flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 px-6 py-3 rounded-lg">
-                        <i class='bx bx-briefcase text-xl'></i> Hire Me
+                        class="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:opacity-90 transition-all duration-300 px-8 py-4 rounded-xl shadow-md">
+                        <i class='bx bx-briefcase text-xl'></i> Let's Work Together
                     </a>
                     <a href="assets/files/M_Ishar_CV.pdf" download
-                        class="flex items-center gap-2 hover:text-blue-600 transition-all duration-300 px-6 py-3 border rounded-lg">
-                        <i class='bx bx-download text-xl'></i> Download CV
+                        class="flex items-center gap-2 text-blue-600 hover:text-indigo-600 transition-all duration-300 px-8 py-4 border-2 border-blue-600 rounded-xl">
+                        <i class='bx bx-download text-xl'></i> Get My CV
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- ===== Skills Section ===== -->
 
@@ -291,78 +302,167 @@
             </div>
         </div>
     </section>
-   
+
     <!-- ===== Work Section ===== -->
-   
-<!-- ===== Projects Section ===== -->
-<section id="projects" class="relative bg-white py-24">
-  <div class="container mx-auto px-6 lg:px-12">
-    <!-- Heading -->
-    <h2 class="text-3xl sm:text-4xl font-light text-center mb-16">
-      My <span class="text-blue-600">Projects</span>
-    </h2>
 
-    <!-- Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      
-      <!-- C++ Repo -->
-      <a href="https://github.com/IsharWeb/Cpp" target="_blank"
-         class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
-        <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">C++ Projects</h3>
-      </a>
+    <section id="work" class="relative bg-white py-24">
+        <div class="container mx-auto px-6 lg:px-12">
+            <!-- Heading -->
+            <h2 class="text-3xl sm:text-4xl font-light text-center mb-16">
+                My <span class="text-blue-600">Projects</span>
+            </h2>
 
-      <!-- Python Repo -->
-      <a href="https://github.com/IsharWeb/Python" target="_blank"
-         class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
-        <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">Python Projects</h3>
-      </a>
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      <!-- JavaScript Repo -->
-      <a href="https://github.com/IsharWeb/JavaScript" target="_blank"
-         class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
-        <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">JavaScript Projects</h3>
-      </a>
+                <!-- C++ Repo -->
+                <a href="https://github.com/IsharWeb/Cpp" target="_blank"
+                    class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
+                    <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">C++
+                        Projects</h3>
+                </a>
 
-      <!-- Backend JS Repo -->
-      <a href="https://github.com/IsharWeb/Backend-Js" target="_blank"
-         class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
-        <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">Backend JS</h3>
-      </a>
+                <!-- Python Repo -->
+                <a href="https://github.com/IsharWeb/Python" target="_blank"
+                    class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
+                    <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">Python
+                        Projects</h3>
+                </a>
 
-      <!-- Vite React Repo -->
-      <a href="https://github.com/IsharWeb/vite-react" target="_blank"
-         class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
-        <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">Vite React</h3>
-      </a>
+                <!-- JavaScript Repo -->
+                <a href="https://github.com/IsharWeb/JavaScript" target="_blank"
+                    class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
+                    <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">
+                        JavaScript Projects</h3>
+                </a>
 
-      <!-- React_All_Project Repo -->
-      <a href="https://github.com/IsharWeb/React_All_Project" target="_blank"
-         class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
-        <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">React All Projects</h3>
-      </a>
+                <!-- Backend JS Repo -->
+                <a href="https://github.com/IsharWeb/Backend-Js" target="_blank"
+                    class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
+                    <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">
+                        Backend JS</h3>
+                </a>
 
-      <!-- Tourly Repo -->
-      <a href="https://github.com/IsharWeb/Tourly" target="_blank"
-         class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
-        <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">Tourly</h3>
-      </a>
+                <!-- Vite React Repo -->
+                <a href="https://github.com/IsharWeb/vite-react" target="_blank"
+                    class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
+                    <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">Vite
+                        React</h3>
+                </a>
 
-      <!-- Profile Repo -->
-      <a href="https://github.com/IsharWeb/IsharWeb" target="_blank"
-         class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
-        <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">Profile Repo</h3>
-      </a>
+                <!-- React_All_Project Repo -->
+                <a href="https://github.com/IsharWeb/React_All_Project" target="_blank"
+                    class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
+                    <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">React
+                        All Projects</h3>
+                </a>
 
-      <!-- Github Config Repo -->
-      <a href="https://github.com/IsharWeb/github-config" target="_blank"
-         class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
-        <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">GitHub Config</h3>
-      </a>
+                <!-- Tourly Repo -->
+                <a href="https://github.com/IsharWeb/Tourly" target="_blank"
+                    class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
+                    <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">Tourly
+                    </h3>
+                </a>
 
-    </div>
-  </div>
-</section>
+                <!-- Profile Repo -->
+                <a href="https://github.com/IsharWeb/IsharWeb" target="_blank"
+                    class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
+                    <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">
+                        Profile Repo</h3>
+                </a>
 
+                <!-- Github Config Repo -->
+                <a href="https://github.com/IsharWeb/github-config" target="_blank"
+                    class="block p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
+                    <h3 class="text-xl font-medium text-gray-700 hover:text-blue-600 transition-all duration-300">GitHub
+                        Config</h3>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <!-- ===== Contact Section ===== -->
+    <section id="contact" class="relative bg-gray-50 py-24">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <!-- Heading -->
+            <h2 class="text-3xl sm:text-4xl font-light mb-6">
+                Contact <span class="text-blue-600">Me</span>
+            </h2>
+            <p class="text-lg text-gray-600 mb-12">
+                Have a project or just want to say hello? Feel free to reach out using the form below or directly email
+                me at
+                <a href="mailto:isharwebdeveloper@gmail.com" class="text-blue-600 hover:underline">
+                    isharwebdeveloper@gmail.com
+                </a>.
+            </p>
+
+            <!-- Contact Form -->
+            <form action="#" method="POST" class="grid grid-cols-1 gap-6 text-left">
+                <!-- Name -->
+                <input type="text" name="name" placeholder="Your Name"
+                    class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                    required />
+
+                <!-- Email -->
+                <input type="email" name="email" placeholder="Your Email"
+                    class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                    required />
+
+                <!-- Message -->
+                <textarea name="message" rows="5" placeholder="Your Message"
+                    class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                    required></textarea>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-gray-100 text-gray-700 py-10 mt-20">
+        <div
+            class="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+
+            <!-- Left: Brand / Copyright -->
+            <div class="text-center md:text-left">
+                <h2 class="text-xl font-semibold">M Ishar</h2>
+                <p class="text-sm mt-1">&copy; 2025 M Ishar. All Rights Reserved.</p>
+            </div>
+
+            <!-- Middle: Navigation -->
+            <ul class="flex flex-wrap justify-center gap-6 text-sm">
+                <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-600 transition">Skills</a></li>
+                <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
+                <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+            </ul>
+
+            <!-- Right: Social Links -->
+            <div class="flex space-x-4">
+                <a href="https://github.com/IsharWeb" target="_blank"
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg border hover:text-blue-600 transition">
+                    <i class='bx bxl-github text-xl'></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank"
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg border hover:text-blue-600 transition">
+                    <i class='bx bxl-linkedin text-xl'></i>
+                </a>
+                <a href="mailto:isharwebdeveloper@gmail.com"
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg border hover:text-blue-600 transition">
+                    <i class='bx bx-envelope text-xl'></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
 
     <script src="main.js"></script>
 </body>
