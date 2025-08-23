@@ -41,7 +41,7 @@ window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         navbar.classList.add('shadow-sm', 'bg-white');
     } else {
-        navbar.classList.remove('shadow-lg', 'bg-white');
+        navbar.classList.remove('shadow-sm', 'bg-white');
     }
 });
 
@@ -53,6 +53,7 @@ if (menuBtn && menu) {
         menu.classList.toggle('hidden');
     });
 }
+
 
 // ===== Scroll-to-Top Button =====
 const scrollBtn = document.querySelector('#scrollTopBtn');
@@ -74,11 +75,9 @@ if (scrollBtn) {
     });
 }
 
-
-
 // ===== Contact Form Validation =====
 
- // When user clicks your Gmail link directly
+// When user clicks your Gmail link directly
 function openGmail() {
     window.location.href = "mailto:isharwebdeveloper@gmail.com?subject=Hello%20Ishar&body=Hi%20Ishar,%0D%0A";
 }
